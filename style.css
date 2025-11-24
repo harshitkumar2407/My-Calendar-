@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: #073063;
+    padding: 20px;
+}
+h1{
+    width: 100%;
+    text-align: center;
+    color: #c0c0c0;
+
+}
+
+.calendar-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-direction: column; */
+    gap: 15px;
+    margin: 20px 0;
+}
+.calendar-header button{
+    padding: 6px 12px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#month-year{
+    font-size: 22px;
+    font-weight: bold;
+    color: #ddd;
+}
+
+.calendar-weekdays{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    background: #1d6d4d;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 60px;
+    margin-bottom: 10px;
+    box-shadow:
+        2px 2px 8px 1px rgb(255, 255, 255),/* X=0 Y=4 BLUR=10 SPREAD=0 COLOR */
+        -2px -2px 4px 2px rgb(0, 0, 0) inset /* FIRST=OUTER SHADOW, SECOND=INNER BORDER SHADOW */
+}
+.calendar-weekdays div{
+    margin: 10px;
+    border-radius: 10px;
+    padding: 5px 0;
+    font-size: 40px;
+}
+
+.calendar-grid{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+}
+
+.calendar-grid div{
+    margin: 8px 12px;
+    font-size: 40px;
+    background-color: white;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: backgound 0.2s;
+    border: 1px solid #3f3f3f;
+    box-shadow:
+        3px 3px 5px 1px rgba(255, 255, 255, 0.639),/* X=0 Y=4 BLUR=10 SPREAD=0 COLOR */
+        -1px -1px 4px 1px rgb(0, 0, 0) inset /* FIRST=OUTER SHADOW, SECOND=INNER BORDER SHADOW */
+}
+
+.calendar-grid div:hover{
+    background-color: #f0f0f0;
+}
+.calendar-grid .empty {
+
+    background: #777;
+    border: none;
+    cursor: default;
+}
+
+.today{
+    font-weight:900;
+    color:white ;
+    background-color: #073063 !important;
+    border: 20px solid #fbc02d;
+}
+#prev-month{
+    height: 50px;
+    width: 50px;
+    border: 0;
+    border-radius: 100%;
+    box-shadow:
+        2px 2px 8px 1px rgb(255, 255, 255),/* X=0 Y=4 BLUR=10 SPREAD=0 COLOR */
+        -2px -2px 4px 2px rgb(0, 0, 0) inset /* FIRST=OUTER SHADOW, SECOND=INNER BORDER SHADOW */
+}
+#next-month{
+    height: 50px;
+    width: 50px;
+    border: 0;
+    border-radius: 100%;
+    box-shadow:
+        2px 2px 8px 1px rgb(255, 255, 255),/* X=0 Y=4 BLUR=10 SPREAD=0 COLOR */
+        -2px -2px 4px 2px rgb(0, 0, 0) inset /* FIRST=OUTER SHADOW, SECOND=INNER BORDER SHADOW */
+}
