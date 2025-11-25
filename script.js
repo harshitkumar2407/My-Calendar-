@@ -45,7 +45,7 @@ function generateCalendar() {
     ) {
         div.classList.add("today");
     }
-    
+
         grid.appendChild(div);       
     }
 }
@@ -73,3 +73,18 @@ nextBtn.addEventListener("click", () => {
     updateHeader();
     generateCalendar();
 });
+
+window.addEventListener("keydown",function (detail) {
+    console.log(detail);
+     if (detail.key == "ArrowRight") {
+        currentDate.setMonth(currentDate.getMonth() + 1);
+        updateHeader();
+        generateCalendar();
+     }
+
+     if (detail.key == "ArrowLeft") {
+        currentDate.setMonth(currentDate.getMonth() - 1);
+        updateHeader();
+        generateCalendar();
+     } 
+})

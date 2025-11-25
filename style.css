@@ -79,8 +79,8 @@ h1{
     background-color: #f0f0f0;
 }
 .calendar-grid .empty {
-
-    background: #777;
+    box-shadow: none;
+    background: #77777700;
     border: none;
     cursor: default;
 }
@@ -88,7 +88,7 @@ h1{
 .today{
     font-weight:900;
     color:white ;
-    background-color: #073063 !important;
+    background-color: #388337 !important;
     border: 20px solid #fbc02d;
 }
 #prev-month{
@@ -106,6 +106,6 @@ h1{
     border: 0;
     border-radius: 100%;
     box-shadow:
-        2px 2px 8px 1px rgb(255, 255, 255),/* X=0 Y=4 BLUR=10 SPREAD=0 COLOR */
-        -2px -2px 4px 2px rgb(0, 0, 0) inset /* FIRST=OUTER SHADOW, SECOND=INNER BORDER SHADOW */
+        2px 2px 8px 1px rgb(255, 255, 255),
+        -2px -2px 4px 2px rgb(0, 0, 0) inset
 }
